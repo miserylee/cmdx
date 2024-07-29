@@ -1,6 +1,6 @@
 {
   "name": "@cmdx/core",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "",
   "author": "MiseryLee <miserylee@foxmail.com>",
   "homepage": "https://github.com/miserylee/cmdx#readme",
@@ -30,7 +30,5 @@
     "@types/node": "^22.0.0",
     "eslint": "^8.57.0",
     "typescript": "^5.3.3"
-  },
-  "dependencies": {
   }
 }
