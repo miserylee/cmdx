@@ -1,0 +1,38 @@
+{
+  "name": "@cmdx/printer",
+  "version": "0.0.0",
+  "description": "",
+  "author": "MiseryLee <miserylee@foxmail.com>",
+  "homepage": "https://github.com/miserylee/cmdx#readme",
+  "license": "MIT",
+  "main": "src/index.ts",
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "main": "lib/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miserylee/cmdx.git"
+  },
+  "scripts": {
+    "test": "exit 0",
+    "build": "tsc",
+    "version": "npm run build"
+  },
+  "bugs": {
+    "url": "https://github.com/miserylee/cmdx/issues"
+  },
+  "devDependencies": {
+    "@formmy/configs": "^0.2.2",
+    "eslint": "^8.57.0",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "cli-table3": "^0.6.5",
+    "supports-hyperlinks": "^3.0.0",
+    "wrap-ansi": "^9.0.0"
+  }
+}
