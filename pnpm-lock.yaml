@@ -17,16 +17,19 @@ importers:
   packages/core:
     specifiers:
       '@formmy/configs': ^0.2.2
+      '@types/node': ^22.0.0
       eslint: ^8.57.0
       typescript: ^5.3.3
     devDependencies:
       '@formmy/configs': 0.2.2
+      '@types/node': 22.0.0
       eslint: 8.57.0
       typescript: 5.5.4
 
   packages/printer:
     specifiers:
       '@formmy/configs': ^0.2.2
+      '@types/node': ^22.0.0
       cli-table3: ^0.6.5
       eslint: ^8.57.0
       supports-hyperlinks: ^3.0.0
@@ -38,6 +41,7 @@ importers:
       wrap-ansi: 9.0.0
     devDependencies:
       '@formmy/configs': 0.2.2
+      '@types/node': 22.0.0
       eslint: 8.57.0
       typescript: 5.5.4
 
