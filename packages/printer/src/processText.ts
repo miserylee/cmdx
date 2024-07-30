@@ -48,7 +48,7 @@ export function padText(text: string, format: number | string): string {
       text = text.slice(0, -1);
     }
     while (textWidth(text) < totalLen) {
-      text = text = '…';
+      text = text + '…';
     }
     return text;
   }
@@ -66,8 +66,8 @@ export function padText(text: string, format: number | string): string {
   if (textWidth(text) === totalLen) {
     return text;
   }
-  // 追加了占位后超出了目标长度时，移除尾部字符并补空格
-  text = text.slice(0, -1);
+  // 追加了占位后超出了目标长度时，移除头部字符并补尾空格
+  text = text.slice(1);
   while (textWidth(text) < totalLen) {
     text = text + ' ';
   }

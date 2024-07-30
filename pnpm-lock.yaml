@@ -16,13 +16,13 @@ importers:
 
   packages/core:
     specifiers:
-      '@formmy/configs': ^0.2.4
+      '@formmy/configs': ^0.2.5
       '@types/node': ^22.0.0
       eslint: ^8.57.0
       typescript: ^5.3.3
       vitest: ^2.0.4
     devDependencies:
-      '@formmy/configs': 0.2.4_@types+node@22.0.0
+      '@formmy/configs': 0.2.5_@types+node@22.0.0
       '@types/node': 22.0.0
       eslint: 8.57.0
       typescript: 5.5.4
@@ -30,7 +30,7 @@ importers:
 
   packages/printer:
     specifiers:
-      '@formmy/configs': ^0.2.4
+      '@formmy/configs': ^0.2.5
       '@types/node': ^22.0.0
       cli-table3: ^0.6.5
       eslint: ^8.57.0
@@ -43,7 +43,7 @@ importers:
       supports-hyperlinks: 3.0.0
       wrap-ansi: 9.0.0
     devDependencies:
-      '@formmy/configs': 0.2.4_@types+node@22.0.0
+      '@formmy/configs': 0.2.5_@types+node@22.0.0
       '@types/node': 22.0.0
       eslint: 8.57.0
       typescript: 5.5.4
@@ -359,8 +359,8 @@ packages:
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
 
-  /@formmy/configs/0.2.4_@types+node@22.0.0:
-    resolution: {integrity: sha512-H/L/6+zL5pmzcuIKjPn3QWwzxNM9OwiLzuAFZ1V+kYrOdvjfLB8J4fbEAiJOud2tK3p0ls0h8kOv9CkUMxS0+g==}
+  /@formmy/configs/0.2.5_@types+node@22.0.0:
+    resolution: {integrity: sha512-fxIUT48ANi12+DleK9gQWrlZVpzkyCPra2pru6uDwlxc2HjjlYVAHWkdMS0M3u00VHauSpDTYL8dmrDQaOn52w==}
     dependencies:
       '@typescript-eslint/eslint-plugin': 7.17.0_gdzsajg5b2i45zm6j25ky43zii
       '@typescript-eslint/parser': 7.17.0_qusgslmwnowdaqieuropes6b5q
