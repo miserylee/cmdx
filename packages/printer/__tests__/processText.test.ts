@@ -25,6 +25,13 @@ describe('processText', () => {
     ])(`should pad text(%s) with format %s`, (text, format, expectedText) => {
       expect(padText(text, format)).toBe(expectedText);
     });
+    it('should print debug info when format is invalid', () => {
+      const mockStderrWrite = vi.spyOn(process.stderr, 'write').mockImplementation(vi.fn());
+      padText('foobar', 'aaa');
+      expect(mockStderrWrite).toBeCalledWith(
+        `${paint(ANSI.brightBlack)('padText failed: invalid format aaa')}\n`
+      );
+    });
   });
   describe('purify', () => {
     it('should remove all control characters as expected', () => {

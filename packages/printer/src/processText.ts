@@ -1,3 +1,5 @@
+import { printDebug } from './print';
+
 export function textWidth(text: string): number {
   return text.length + (text.match(/[\u4e00-\u9fa5]/g)?.length ?? 0);
 }
@@ -21,7 +23,7 @@ export function textWidth(text: string): number {
 export function padText(text: string, format: number | string): string {
   const parsedFormat = /^(\D?)(\d+)(\D?)$/.exec(String(format));
   if (!parsedFormat) {
-    // TODO: print debug error
+    printDebug(`padText failed: invalid format ${format}`);
     return text;
   }
   const [, _prefix, lenStr, suffix] = parsedFormat;
