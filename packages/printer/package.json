@@ -18,7 +18,8 @@
     "url": "git+https://github.com/miserylee/cmdx.git"
   },
   "scripts": {
-    "test": "exit 0",
+    "test": "vitest",
+    "test:cov": "vitest run --coverage",
     "build": "tsc",
     "version": "npm run build"
   },
@@ -26,10 +27,11 @@
     "url": "https://github.com/miserylee/cmdx/issues"
   },
   "devDependencies": {
-    "@formmy/configs": "^0.2.2",
+    "@formmy/configs": "^0.2.4",
     "@types/node": "^22.0.0",
     "eslint": "^8.57.0",
-    "typescript": "^5.3.3"
+    "typescript": "^5.3.3",
+    "vitest": "^2.0.4"
   },
   "dependencies": {
     "cli-table3": "^0.6.5",
