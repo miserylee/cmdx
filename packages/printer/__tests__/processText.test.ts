@@ -1,4 +1,5 @@
-import { padText, textWidth } from '../src/processText';
+import { padText, purify, textWidth } from '../src/processText';
+import { ANSI, paint } from '../src';
 
 describe('processText', () => {
   describe('textWidth', () => {
@@ -23,6 +24,14 @@ describe('processText', () => {
       ['foobar', '中11文', '中foobar文 '],
     ])(`should pad text(%s) with format %s`, (text, format, expectedText) => {
       expect(padText(text, format)).toBe(expectedText);
+    });
+  });
+  describe('purify', () => {
+    it('should remove all control characters as expected', () => {
+      expect(purify(paint(ANSI.blue)('foobar'))).toBe('foobar');
+      expect(purify(`${paint(ANSI.blue)('foobar')}\n${paint(ANSI.italic)('hello')} world`)).toBe(
+        'foobar\nhello world'
+      );
     });
   });
 });
