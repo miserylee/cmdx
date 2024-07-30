@@ -73,3 +73,7 @@ export function padText(text: string, format: number | string): string {
   }
   return text;
 }
+
+export function purify(text: string): string {
+  return text.replace(/\x1b\[[0-9;]*m/g, '');
+}
