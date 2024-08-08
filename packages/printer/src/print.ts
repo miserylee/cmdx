@@ -1,6 +1,7 @@
-import { WriteStream } from 'tty';
-import { purify } from './processText';
+import { type WriteStream } from 'tty';
+
 import { ANSI, paint } from './paint';
+import { purify } from './processText';
 
 export function print(text: string, stream: WriteStream = process.stdout): void {
   stream.write(stream.isTTY ? text : purify(text));

@@ -1,5 +1,7 @@
-import { supportsHyperlink } from 'supports-hyperlinks';
 import * as process from 'node:process';
+
+import { supportsHyperlink } from 'supports-hyperlinks';
+
 import { ANSI, paint } from './paint';
 
 const OSC = '\u001B]';
