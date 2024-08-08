@@ -3,6 +3,7 @@
   "private": true,
   "scripts": {
     "lint": "pnpm -r run lint",
+    "lint-staged": "./tools/node_modules/.bin/lint-staged",
     "test": "pnpm -r run test",
     "release": "./tools/node_modules/.bin/lerna publish"
   }
