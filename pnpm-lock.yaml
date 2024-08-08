@@ -16,13 +16,13 @@ importers:
 
   packages/core:
     specifiers:
-      '@formmy/configs': ^0.2.5
+      '@formmy/configs': ^0.2.10
       '@types/node': ^22.0.0
       eslint: ^8.57.0
       typescript: ^5.3.3
       vitest: ^2.0.4
     devDependencies:
-      '@formmy/configs': 0.2.5_@types+node@22.0.0
+      '@formmy/configs': 0.2.10_@types+node@22.0.0
       '@types/node': 22.0.0
       eslint: 8.57.0
       typescript: 5.5.4
@@ -30,7 +30,7 @@ importers:
 
   packages/printer:
     specifiers:
-      '@formmy/configs': ^0.2.5
+      '@formmy/configs': ^0.2.10
       '@types/node': ^22.0.0
       cli-table3: ^0.6.5
       eslint: ^8.57.0
@@ -43,7 +43,7 @@ importers:
       supports-hyperlinks: 3.0.0
       wrap-ansi: 9.0.0
     devDependencies:
-      '@formmy/configs': 0.2.5_@types+node@22.0.0
+      '@formmy/configs': 0.2.10_@types+node@22.0.0
       '@types/node': 22.0.0
       eslint: 8.57.0
       typescript: 5.5.4
@@ -359,9 +359,10 @@ packages:
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
 
-  /@formmy/configs/0.2.5_@types+node@22.0.0:
-    resolution: {integrity: sha512-fxIUT48ANi12+DleK9gQWrlZVpzkyCPra2pru6uDwlxc2HjjlYVAHWkdMS0M3u00VHauSpDTYL8dmrDQaOn52w==}
+  /@formmy/configs/0.2.10_@types+node@22.0.0:
+    resolution: {integrity: sha512-xRG2AKBp69RgQa7blv7/Lda9VtAxxYP0isXfuz+F4UvFGaRZ+n69CDkS4w2tFzfpBH3LlSEZZoYiYi94Nva8gw==}
     dependencies:
+      '@rushstack/eslint-patch': 1.10.4
       '@typescript-eslint/eslint-plugin': 7.17.0_gdzsajg5b2i45zm6j25ky43zii
       '@typescript-eslint/parser': 7.17.0_qusgslmwnowdaqieuropes6b5q
       '@vitest/coverage-v8': 2.0.4_vitest@2.0.4
@@ -1302,6 +1303,10 @@ packages:
     requiresBuild: true
     dev: true
     optional: true
+
+  /@rushstack/eslint-patch/1.10.4:
+    resolution: {integrity: sha512-WJgX9nzTqknM393q1QJDJmoW28kUfEnybeTfVNcNAPnIx210RXm2DiXiHzfNPJNIUUb1tJnz/l4QGtJ30PgWmA==}
+    dev: true
 
   /@sec-ant/readable-stream/0.4.1:
     resolution: {integrity: sha512-831qok9r2t8AlxLko40y2ebgSDhenenCatLVeW/uBtnHPyhHOvG0C7TvfgecV+wHzIm5KUICgzmVpWS+IMEAeg==}
