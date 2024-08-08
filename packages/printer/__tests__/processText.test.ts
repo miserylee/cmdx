@@ -1,5 +1,5 @@
-import { padText, purify, textWidth } from '../src/processText';
 import { ANSI, paint } from '../src';
+import { padText, purify, textWidth } from '../src/processText';
 
 describe('processText', () => {
   describe('textWidth', () => {
@@ -22,15 +22,9 @@ describe('processText', () => {
       ['中文', '10', '      中文'],
       ['中文中文中文', '10', '中文中文……'],
       ['foobar', '中11文', '中foobar文 '],
+      ['foobar', 'aaa', 'foobar'],
     ])(`should pad text(%s) with format %s`, (text, format, expectedText) => {
       expect(padText(text, format)).toBe(expectedText);
-    });
-    it('should print debug info when format is invalid', () => {
-      const mockStderrWrite = vi.spyOn(process.stderr, 'write').mockImplementation(vi.fn());
-      padText('foobar', 'aaa');
-      expect(mockStderrWrite).toBeCalledWith(
-        `${paint(ANSI.brightBlack)('padText failed: invalid format aaa')}\n`
-      );
     });
   });
   describe('purify', () => {

@@ -1,13 +1,9 @@
 {
   "name": "cmdx",
   "private": true,
-  "devDependencies": {
-    "@lerna-lite/cli": "^3.3.1",
-    "@lerna-lite/list": "^3.7.1",
-    "@lerna-lite/publish": "^3.3.1",
-    "@lerna-lite/version": "^3.3.1"
-  },
   "scripts": {
-    "publish": "lerna publish"
+    "lint": "pnpm -r run lint",
+    "test": "pnpm -r run test",
+    "release": "./tools/node_modules/.bin/lerna publish"
   }
 }
