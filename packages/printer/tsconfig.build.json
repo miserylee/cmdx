@@ -1,5 +1,9 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "extends": "@formmy/configs/tsconfig.json",
-  "include": ["src", "__tests__", "examples"]
+  "compilerOptions": {
+    "noEmit": false,
+    "outDir": "lib"
+  },
+  "include": ["src"]
 }
