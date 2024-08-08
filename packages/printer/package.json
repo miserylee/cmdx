@@ -21,7 +21,7 @@
     "lint": "eslint .",
     "test": "vitest --run",
     "test:cov": "vitest run --coverage",
-    "build": "tsc",
+    "build": "rm -rf lib && tsc -p tsconfig.build.json",
     "version": "npm run build"
   },
   "bugs": {
