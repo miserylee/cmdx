@@ -2,6 +2,35 @@ export function textWidth(text: string): number {
   return text.length + (text.match(/[\u4e00-\u9fa5]/g)?.length ?? 0);
 }
 
+export function sliceText(text: string, start: number, end: number): string {
+  const totalWidth = textWidth(text);
+  const actualEnd = end < 0 ? totalWidth + end : end;
+  const expectedWidth = actualEnd - start;
+
+  if (totalWidth <= expectedWidth) {
+    return text;
+  }
+
+  let finalText: string = '';
+  let currentWidth = -start;
+
+  text.split('').forEach((char) => {
+    if (currentWidth >= expectedWidth) {
+      return false;
+    }
+    currentWidth += textWidth(char);
+    if (currentWidth > expectedWidth) {
+      return false;
+    }
+    if (currentWidth > 0) {
+      finalText += char;
+    }
+    return false;
+  });
+
+  return finalText;
+}
+
 /**
  * 补充文本到目标长度
  * @param text
