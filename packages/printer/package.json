@@ -18,7 +18,8 @@
     "url": "git+https://github.com/miserylee/cmdx.git"
   },
   "scripts": {
-    "test": "vitest",
+    "lint": "eslint .",
+    "test": "vitest --run",
     "test:cov": "vitest run --coverage",
     "build": "tsc",
     "version": "npm run build"

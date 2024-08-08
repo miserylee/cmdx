@@ -18,6 +18,7 @@
     "url": "git+https://github.com/miserylee/cmdx.git"
   },
   "scripts": {
+    "lint": "eslint .",
     "test": "exit 0",
     "build": "tsc",
     "version": "npm run build"
