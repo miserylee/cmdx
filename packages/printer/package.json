@@ -30,13 +30,15 @@
   "devDependencies": {
     "@formmy/configs": "^0.2.10",
     "@types/node": "^22.0.0",
+    "@types/wrap-ansi": "8.0.1",
     "eslint": "^8.57.0",
+    "sucrase": "^3.35.0",
     "typescript": "^5.3.3",
     "vitest": "^2.0.4"
   },
   "dependencies": {
     "cli-table3": "^0.6.5",
     "supports-hyperlinks": "^3.0.0",
-    "wrap-ansi": "^9.0.0"
+    "wrap-ansi": "^7.0.0"
   }
 }
