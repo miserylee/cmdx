@@ -11,12 +11,12 @@ export const validateInput: Plugin = {
       const errors: string[] = [];
       if (!context.hintSchema.allowUnknownFlags) {
         // unknown flag
-        Object.keys(context.unknownFlags).forEach((optionKey) => {
-          errors.push(`unknown flag '${optionKey}'.`);
+        Object.keys(context.unknownFlags).forEach((flagKey) => {
+          errors.push(`unknown flag '${flagKey}'.`);
         });
         // unknown shorten flag
-        Object.keys(context.unknownShortenFlags).forEach((optionKey) => {
-          errors.push(`unknown shorten flag '${optionKey}'.`);
+        Object.keys(context.unknownShortenFlags).forEach((flagKey) => {
+          errors.push(`unknown shorten flag '${flagKey}'.`);
         });
       }
       if (!context.hintSchema.allowUnknownArguments) {
