@@ -28,7 +28,7 @@ export function printWarn(text: string): void {
     .split('\n')
     .forEach((line, index) => {
       if (index === 0) {
-        println(paint(ANSI.yellow)(`${paint(ANSI.bold)('WARN')} ${line}`), process.stderr);
+        println(`${paint(ANSI.bold, ANSI.yellow)('WARN')} ${paint(ANSI.yellow)(line)}`, process.stderr);
         return;
       }
       println(`     ${paint(ANSI.yellow)(line)}`, process.stderr);
@@ -40,7 +40,7 @@ export function printFail(text: string): void {
     .split('\n')
     .forEach((line, index) => {
       if (index === 0) {
-        println(paint(ANSI.red)(`${paint(ANSI.bold)('FAIL')} ${line}`), process.stderr);
+        println(`${paint(ANSI.bold, ANSI.red)('FAIL')} ${paint(ANSI.red)(line)}`, process.stderr);
         return;
       }
       println(`     ${paint(ANSI.red)(line)}`, process.stderr);

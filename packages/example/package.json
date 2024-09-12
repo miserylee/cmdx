@@ -1,42 +1,30 @@
 {
-  "name": "@cmdx/core",
-  "version": "0.1.0",
+  "name": "@cmdx/example",
+  "version": "0.0.0",
   "description": "",
   "author": "MiseryLee <miserylee@foxmail.com>",
   "homepage": "https://github.com/miserylee/cmdx#readme",
-  "license": "MIT",
-  "main": "src/index.ts",
-  "files": [
-    "lib"
-  ],
-  "publishConfig": {
-    "access": "public",
-    "main": "lib/index.js"
-  },
+  "private": true,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/miserylee/cmdx.git"
   },
   "scripts": {
     "lint": "eslint .",
-    "test": "exit 0",
-    "build": "rm -rf lib && tsc -p tsconfig.build.json",
-    "version": "npm run build"
+    "test": "exit 0"
   },
   "bugs": {
     "url": "https://github.com/miserylee/cmdx/issues"
   },
   "dependencies": {
-    "@cmdx/printer": "workspace:*",
-    "clone": "^2.1.2",
-    "wrap-ansi": "^7.0.0"
+    "@cmdx/core": "workspace:*",
+    "@cmdx/printer": "workspace:*"
   },
   "devDependencies": {
     "@formmy/configs": "^0.2.10",
-    "@types/clone": "^2.1.4",
     "@types/node": "^22.0.0",
-    "@types/wrap-ansi": "8.0.1",
     "eslint": "^8.57.0",
+    "sucrase": "^3.35.0",
     "typescript": "^5.3.3",
     "vitest": "^2.0.4"
   }
