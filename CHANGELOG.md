@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.1](https://github.com/miserylee/cmdx/compare/v0.2.0...v0.2.1) (2024-10-12)
+
+### Bug Fixes
+
+* rename vars ([7e7e217](https://github.com/miserylee/cmdx/commit/7e7e217bc73089072e9aebf2c093f85506dbe3d1))
+* type issue ([34bf95d](https://github.com/miserylee/cmdx/commit/34bf95de82bfdd84faa625427098bd9a082bb986))
+
 # [0.2.0](https://github.com/miserylee/cmdx/compare/v0.1.0...v0.2.0) (2024-09-12)
 
 ### Features
