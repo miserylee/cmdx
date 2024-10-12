@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/miserylee/cmdx/compare/v0.2.1...v0.3.0) (2024-10-12)
+
+**Note:** Version bump only for package @cmdx/example
+
 ## [0.2.1](https://github.com/miserylee/cmdx/compare/v0.2.0...v0.2.1) (2024-10-12)
 
 **Note:** Version bump only for package @cmdx/example
