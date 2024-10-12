@@ -77,6 +77,7 @@ export class App {
       errors: [],
     };
 
+    const initActions: PluginHookActionWithPluginName[] = [];
     const beforeParseActions: PluginHookActionWithPluginName[] = [];
     const afterParseActions: PluginHookActionWithPluginName[] = [];
     const beforeExecuteActions: PluginHookActionWithPluginName[] = [];
@@ -86,6 +87,9 @@ export class App {
     // apply all plugins
     for (const plugin of this.plugins) {
       plugin.apply({
+        init: (action) => {
+          initActions.push({ action, name: plugin.name });
+        },
         beforeParse: (action) => {
           beforeParseActions.push({ action, name: plugin.name });
         },
@@ -124,6 +128,10 @@ export class App {
     };
 
     await runSteps([
+      async () => {
+        // run before parse actions
+        await runHookActions(initActions);
+      },
       async () => {
         // run before parse actions
         await runHookActions(beforeParseActions);
