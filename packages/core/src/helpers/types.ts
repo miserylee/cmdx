@@ -236,6 +236,7 @@ export interface PluginHookActionWithPluginName {
 }
 export type PluginHook = (action: PluginHookAction) => void;
 export interface PluginHooks {
+  init: PluginHook;
   beforeParse: PluginHook;
   afterParse: PluginHook;
   beforeExecute: PluginHook;
