@@ -140,7 +140,7 @@ export interface NormalizedError extends Error {
 export interface Context<
   Args extends object = Record<string, ArgumentValue | undefined>,
   Flags extends object = Record<string, FlagValue | undefined>,
-  State extends object = object,
+  State extends object = Record<string, unknown>,
 > {
   /**
    * the cwd when execute command
