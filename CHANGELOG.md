@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/miserylee/cmdx/compare/v0.2.1...v0.3.0) (2024-10-12)
+
+### Features
+
+* add init hook ([cc88ebf](https://github.com/miserylee/cmdx/commit/cc88ebf021af2be3988d21a2a5b9c675a519e5bc))
+
 ## [0.2.1](https://github.com/miserylee/cmdx/compare/v0.2.0...v0.2.1) (2024-10-12)
 
 ### Bug Fixes
