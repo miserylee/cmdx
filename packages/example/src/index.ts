@@ -1,5 +1,3 @@
-import * as process from 'node:process';
-
 import { App } from '@cmdx/core';
 import { createReactiveLog } from '@cmdx/printer';
 
