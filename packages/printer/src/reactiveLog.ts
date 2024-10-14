@@ -1,4 +1,4 @@
-import * as readline from 'node:readline';
+import readline from 'readline';
 import { type WriteStream } from 'tty';
 
 import wrapAnsi from 'wrap-ansi';
