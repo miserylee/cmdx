@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.3](https://github.com/miserylee/cmdx/compare/v0.3.2...v0.3.3) (2024-12-11)
+
+### Bug Fixes
+
+* variadic arguments default value unexpected set to flags ([5012396](https://github.com/miserylee/cmdx/commit/50123968140fd26709dd0f4cb65ecc2c81d0d518))
+
 ## [0.3.2](https://github.com/miserylee/cmdx/compare/v0.3.1...v0.3.2) (2024-10-14)
 
 ### Bug Fixes
