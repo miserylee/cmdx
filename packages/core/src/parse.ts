@@ -65,7 +65,7 @@ export async function parse(context: Context): Promise<void> {
         if (argumentSchema.default !== undefined) {
           context.arguments[argumentSchema.name] = argumentSchema.default;
         } else if (argumentSchema.variadic) {
-          context.flags[argumentSchema.name] = [];
+          context.arguments[argumentSchema.name] = [];
         }
       });
     }
