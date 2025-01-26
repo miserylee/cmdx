@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/miserylee/cmdx/compare/@cmdx/launcher@0.1.2...@cmdx/launcher@0.2.0) (2025-01-26)
+
+### Features
+
+* support json5 config file ([59a65b4](https://github.com/miserylee/cmdx/commit/59a65b455074ac778697b0cade3291b92ed5ae66))
+
 ## [0.1.2](https://github.com/miserylee/cmdx/compare/@cmdx/launcher@0.1.1...@cmdx/launcher@0.1.2) (2025-01-26)
 
 **Note:** Version bump only for package @cmdx/launcher
