@@ -7,6 +7,7 @@ import { App, type Context } from '@cmdx/core';
 import { printDebug, printInfo, printWarn } from '@cmdx/printer';
 import findup from 'find-up';
 import fs from 'fs-extra';
+import json5 from 'json5';
 
 const configFilename = '.cmdxrc.json';
 
@@ -41,7 +42,7 @@ function readConfig(root: string): CmdxLauncherConfig {
     fs.writeJSONSync(fullConfigFilename, defaultValue);
     return defaultValue;
   }
-  const config = fs.readJSONSync(fullConfigFilename);
+  const config = json5.parse(fs.readFileSync(fullConfigFilename, 'utf-8'));
   return {
     ...defaultValue,
     ...config,
@@ -156,8 +157,11 @@ app
         await Promise.all(
           finalMods.map(async (mod) => {
             try {
-              const pkgJson = fs.readJSONSync(path.resolve(mod, 'package.json'));
-              const modName = pkgJson.name ?? path.parse(mod).name;
+              let modName = 'unknown';
+              if (fs.statSync(mod).isDirectory()) {
+                const pkgJson = fs.readJSONSync(path.resolve(mod, 'package.json'));
+                modName = pkgJson.name ?? path.parse(mod).name;
+              }
               let schema = await import(mod);
               if ('default' in schema) {
                 schema = schema.default;
