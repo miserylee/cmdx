@@ -6,7 +6,10 @@
   "homepage": "https://github.com/miserylee/cmdx#readme",
   "license": "MIT",
   "main": "src/index.ts",
-  "bin": "./bin/cmdx",
+  "bin": {
+    "cmdx": "./bin/cmdx",
+    "x": "./bin/cmdx"
+  },
   "files": [
     "lib",
     "bin"
