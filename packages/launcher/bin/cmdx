@@ -1,0 +1,7 @@
+#!/usr/bin/env node
+
+require('sucrase/register');
+
+process.env.NODE_ENV = 'production';
+
+require('../lib/cmdx');
