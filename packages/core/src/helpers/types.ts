@@ -140,7 +140,8 @@ export interface NormalizedError extends Error {
 export interface Context<
   Args extends object = Record<string, ArgumentValue | undefined>,
   Flags extends object = Record<string, FlagValue | undefined>,
-  State extends object = Record<string, unknown>,
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  State extends object = any,
 > {
   /**
    * the cwd when execute command
