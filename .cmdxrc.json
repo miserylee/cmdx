@@ -1,4 +1,5 @@
 {
+  // install mods
   "mods": [
     "./packages/example"
   ]
