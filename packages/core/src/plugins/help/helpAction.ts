@@ -121,7 +121,7 @@ export default async (context: Context): Promise<void> => {
   // options
   rows.push(title(`Options:`));
   flagEntries.forEach(([optionKey, optionSchema]) => {
-    if (optionSchema?.hidden) {
+    if (optionSchema?.hidden && !showDebugInfo()) {
       return;
     }
     let formattedLeft = `--${optionKey}`;
@@ -135,7 +135,10 @@ export default async (context: Context): Promise<void> => {
     }
     formattedLeft = `  ${formattedLeft}`;
 
-    appendFormattedRow(formattedLeft, formatRight(optionSchema));
+    const rightContent = formatRight(optionSchema);
+    const finalRight =
+      optionSchema?.hidden && showDebugInfo() ? `${rightContent} ${weakText('(hidden)')}` : rightContent;
+    appendFormattedRow(formattedLeft, finalRight);
   });
   appendFormattedRow(`  -h, --help`, `display help info`);
   rows.push(``);
@@ -144,7 +147,7 @@ export default async (context: Context): Promise<void> => {
   if (hasCommands) {
     rows.push(title(`Subcommands:`));
     commandEntries.forEach(([command, commandSchema]) => {
-      if (commandSchema.hidden) {
+      if (commandSchema.hidden && !showDebugInfo()) {
         return;
       }
       const rightSegments = [];
@@ -153,6 +156,9 @@ export default async (context: Context): Promise<void> => {
       }
       if (showDebugInfo()) {
         rightSegments.push(weakText(`(from mod: ${commandSchema.mod?.name})`));
+      }
+      if (commandSchema.hidden && showDebugInfo()) {
+        rightSegments.push(weakText('(hidden)'));
       }
       appendFormattedRow(`  ${command}`, rightSegments.join(' '));
     });
