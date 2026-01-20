@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.5.0](https://github.com/miserylee/cmdx/compare/@cmdx/core@0.4.0...@cmdx/core@0.5.0) (2026-01-20)
+
+### Features
+
+* show hidden commands in help when VERBOSE ([11061b3](https://github.com/miserylee/cmdx/commit/11061b386b201758b4c02512e6dd1e0ecf1cd9db))
+
 # 0.4.0 (2025-01-26)
 
 ### Features
