@@ -140,11 +140,13 @@ export async function parse(context: Context): Promise<void> {
           return;
         }
         // hint long flag key
-        pendingFlagKey = arg.slice(2);
-        if (pendingFlagKey.includes('=')) {
-          const [left, right] = pendingFlagKey.split('=');
-          pendingFlagKey = left;
-          pendingFlagValue = right;
+        const fullArg = arg.slice(2);
+        if (fullArg.includes('=')) {
+          const eqIndex = fullArg.indexOf('=');
+          pendingFlagKey = fullArg.slice(0, eqIndex);
+          pendingFlagValue = fullArg.slice(eqIndex + 1);
+        } else {
+          pendingFlagKey = fullArg;
         }
         // hint negative flag
         if (pendingFlagKey.startsWith('no-')) {
@@ -155,11 +157,13 @@ export async function parse(context: Context): Promise<void> {
         return;
       }
       // hint shorten flag key
-      pendingFlagKey = arg.slice(1);
-      if (pendingFlagKey.includes('=')) {
-        const [left, right] = pendingFlagKey.split('=');
-        pendingFlagKey = left;
-        pendingFlagValue = right;
+      const fullArg = arg.slice(1);
+      if (fullArg.includes('=')) {
+        const eqIndex = fullArg.indexOf('=');
+        pendingFlagKey = fullArg.slice(0, eqIndex);
+        pendingFlagValue = fullArg.slice(eqIndex + 1);
+      } else {
+        pendingFlagKey = fullArg;
       }
       if (!(pendingFlagKey in shortenFlags)) {
         pendingFlagIsUnknownShorten = true;
